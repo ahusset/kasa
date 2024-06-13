@@ -1,0 +1,54 @@
+/** @format */
+
+// Import des mixins et variables
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.banner-container {
+  position: relative; // Pour le positionnement absolu du texte et de l'overlay
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+  @include small-radius;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    height: 200px;
+    @include big-radius;
+  }
+
+  &.home-banner {
+    background-image: url('../../Images/background-banner.png');
+  }
+
+  &.about-banner {
+    background-image: url('../../Images/about-background.png');
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); // Fond noir avec opacité de 60%
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include small-radius; // Ajout du même radius pour correspondre au container
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      @include big-radius; // Ajout du même radius pour correspondre au container
+    }
+  }
+
+  .banner-text-container {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.42;
+    color: $tertiary-color;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 48px;
+    }
+  }
+}

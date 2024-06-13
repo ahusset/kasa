@@ -1,0 +1,34 @@
+.card {
+  width: 340px; // Largeur de la carte
+  height: 340px; // Hauteur de la carte
+  border: 1px solid #ddd; // Bordure
+  border-radius: 8px; // Bordure arrondie
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+    height: 200px; // Hauteur de l'image (ajustée pour s'adapter à la carte)
+    object-fit: cover;
+  }
+
+  .card-info {
+    padding: 16px; // Espacement intérieur
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1.25rem; // Taille de la police du titre
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem; // Taille de la police de la localisation
+      color: #555;
+    }
+  }
+}

@@ -1,46 +1,61 @@
 /** @format */
 
-.banner-container {
-  height: 130px;
-  @include small-radius;
-  @include flex-banner;
+.banner-wrapper {
+  position: relative; // Permet à l'overlay d'être positionné absolument à l'intérieur
+  background-size: cover; // Couvre tout le conteneur avec l'image de fond
+  background-position: center; // Centre l'image de fond
+  height: 130px; // Hauteur par défaut
+  @include small-radius; // Bordure arrondie par défaut
+  @include flex-banner; // Centre le contenu avec flexbox
 
   @media screen and (min-width: $breakpoint-desktop) {
-    height: 200px;
-    @include big-radius;
-    @include flex-banner;
+    height: 200px; // Hauteur pour les écrans de bureau
+    @include big-radius; // Bordure plus arrondie pour les écrans de bureau
+  }
+
+  &.home-banner {
+    background-image: url('../../images/background-banner.png'); // Image de fond pour la page d'accueil
+  }
+
+  &.about-banner {
+    background-image: url('../../images/about-background.png'); // Image de fond pour la page "À propos"
+  }
+
+  .banner-overlay {
+    position: absolute; // Couvre tout le conteneur principal
+    top: 0;
+    left: 0;
+    width: 100%; // Largeur totale
+    height: 100%; // Hauteur totale
+    background: rgba(0, 0, 0, 0.6); // Fond noir avec une opacité de 60%
+    display: flex; // Utilise flexbox
+    align-items: center; // Centre verticalement
+    justify-content: center; // Centre horizontalement
+    border-radius: inherit; // Hérite des bordures arrondies du conteneur principal
   }
 
   .banner-text-container {
-    position: absolute;
+    position: absolute; // Positionné absolument pour un placement précis
     top: 28.04%;
     left: 5.6%;
     right: 32.53%;
     bottom: 80.05%;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 24px; // Taille de la police
+    font-weight: 500; // Poids de la police
     line-height: 100%;
-    color: $tertiary-color;
-    @include small-radius;
-    width: 217px;
-    height: 48px;
+    color: $tertiary-color; // Couleur du texte
+    @include small-radius; // Bordures arrondies
+    width: 217px; // Largeur du conteneur de texte
+    height: 48px; // Hauteur du conteneur de texte
 
     @media screen and (min-width: $breakpoint-desktop) {
       top: 0;
       left: 0;
       right: 0;
-      @include flex-center;
-      @include WH-full;
-      @include font(48px, 500);
-      @include big-radius;
+      @include flex-center; // Centre le texte avec flexbox
+      @include WH-full; // Largeur et hauteur complètes
+      @include font(48px, 500); // Taille et poids de la police pour les écrans de bureau
+      @include big-radius; // Bordures plus arrondies pour les écrans de bureau
     }
   }
-}
-
-.home-banner {
-  @include bkgrd($banner-background);
-}
-
-.about-banner {
-  @include bkgrd($about-background);
 }

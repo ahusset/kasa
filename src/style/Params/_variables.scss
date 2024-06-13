@@ -1,0 +1,32 @@
+/** @format */
+
+// Couleurs principales utilisées dans l'application
+$primary-color: #e04040;
+$secondary-color: #f7f7f7;
+$tertiary-color: #ffffff;
+
+$text-nav-principal-color: #000000;
+
+// Couleur du pied de page et de fond
+$footer-color: #000000;
+$background-color: rgba(0, 0, 0, 0.3);
+
+// Dégradé linéaire utilisé pour les cartes
+$linear-cards: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(0, 0, 0, 0.5) 100%
+);
+
+// Arrière-plan pour la page "À propos"
+$about-background: $background-color url(../../images/about-background.png);
+
+// Arrière-plan pour la bannière
+$banner-background: $background-color url(../../images/background-banner.png);
+
+// Breakpoint pour les écrans de bureau
+$breakpoint-desktop: 769px;
+
+// Largeurs minimales et maximales pour le responsive design
+$wmin: 375px;
+$wmax: 768px;

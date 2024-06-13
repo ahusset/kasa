@@ -14,22 +14,22 @@
 }
 
 .slider {
-  @include WH-full;
+  @include WH-full; // Inclure largeur et hauteur pleine
   position: absolute;
   left: 0%;
   right: 0%;
   top: 0%;
   bottom: 0%;
-  @include small-radius;
+  @include small-radius; // Inclure petit rayon de bordure
   opacity: 0;
-  transition: opacity ease-in-out 0.6s; //petit effet d'apparition progressive de l'image dans le slide
+  transition: opacity ease-in-out 0.6s; // Effet d'apparition progressive de l'image
 
   @media screen and (min-width: $breakpoint-desktop) {
-    @include big-radius;
+    @include big-radius; // Inclure grand rayon de bordure
   }
 
   & img {
-    @include WH-full;
+    @include WH-full; // Inclure largeur et hauteur pleine
     object-fit: cover;
     position: absolute;
     left: 0%;
@@ -37,10 +37,10 @@
     top: 0%;
     bottom: 0%;
     mix-blend-mode: normal;
-    @include small-radius;
+    @include small-radius; // Inclure petit rayon de bordure
 
     @media screen and (min-width: $breakpoint-desktop) {
-      @include big-radius;
+      @include big-radius; // Inclure grand rayon de bordure
     }
   }
 
@@ -50,7 +50,7 @@
     @media screen and (min-width: $breakpoint-desktop) {
       display: block;
       position: absolute;
-      @include font(18px, 500);
+      @include font(18px, 500); // Inclure mixin pour la police
       color: $tertiary-color;
       left: 48%;
       top: 86%;
@@ -59,13 +59,13 @@
 }
 
 .active-anim {
-  opacity: 1;
+  opacity: 1; // Rendre le slide actif visible
 }
 
 .rightArrow {
-  @include rightArrow-style;
+  @include rightArrow-style; // Inclure styles pour la flèche droite
 }
 
 .leftArrow {
-  @include leftArrow-style;
+  @include leftArrow-style; // Inclure styles pour la flèche gauche
 }

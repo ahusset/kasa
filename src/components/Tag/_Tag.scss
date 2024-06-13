@@ -1,52 +1,53 @@
 /** @format */
 
 .tagContainer {
-  display: flex;
+  display: flex; // Utilisation de flexbox pour aligner les éléments en ligne
 }
 
 .tagButton {
-  @include flex-center;
-  background: $primary-color;
-  color: $tertiary-color;
-  margin-top: 4%;
-  @include font(10px, 500);
-  height: 18px;
-  border-radius: 5px;
-  margin-right: 10px;
-  padding: 2px 10px 0 10px;
+  @include flex-center; // Utilisation d'un mixin pour centrer les éléments
+  background: $primary-color; // Couleur de fond
+  color: $tertiary-color; // Couleur du texte
+  margin-top: 4%; // Marge en haut
+  @include font(10px, 500); // Utilisation d'un mixin pour définir la police
+  height: 18px; // Hauteur du bouton
+  border-radius: 5px; // Bordure arrondie
+  margin-right: 10px; // Marge à droite
+  padding: 2px 10px 0 10px; // Padding interne
 
   @media screen and (min-width: $breakpoint-desktop) {
-    flex-direction: column;
-    height: 25px;
-    @include small-radius;
-    @include font(14px, 500);
+    flex-direction: column; // Changer la direction de flex en colonne pour les écrans plus grands
+    height: 25px; // Ajustement de la hauteur pour les écrans plus grands
+    @include small-radius; // Utilisation d'un mixin pour un petit rayon de bordure
+    @include font(14px, 500); // Utilisation d'un mixin pour définir la police
   }
 }
 
 .title-tags-container {
-  @include flex-column;
+  @include flex-column; // Utilisation d'un mixin pour aligner les éléments en colonne
 
   h1 {
-    margin: 2% 0;
-    @include font(18px, 500);
+    margin: 2% 0; // Marges en haut et en bas
+    @include font(18px, 500); // Utilisation d'un mixin pour définir la police
 
     @media screen and (min-width: $breakpoint-desktop) {
-      @include font(36px, 500);
+      @include font(36px, 500); // Ajustement de la police pour les écrans plus grands
     }
   }
 
   h3 {
-    margin: 2% 0;
-    @include font(14px, 500);
+    margin: 2% 0; // Marges en haut et en bas
+    color: $text-nav-principal-color; // Couleur du texte
+    @include font(14px, 500); // Utilisation d'un mixin pour définir la police
 
     @media screen and (min-width: $breakpoint-desktop) {
-      @include font(18px, 500);
+      @include font(18px, 500); // Ajustement de la police pour les écrans plus grands
     }
   }
 }
 
 .tags-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  display: flex; // Utilisation de flexbox pour aligner les éléments en ligne
+  flex-wrap: wrap; // Permet aux éléments de se renvoyer à la ligne si nécessaire
+  align-items: baseline; // Alignement des éléments à la ligne de base
 }

@@ -1,27 +1,27 @@
 /** @format */
 
 .headerWrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5%;
+  display: flex; // Utilisation de flexbox pour aligner les éléments
+  justify-content: space-between; // Espacement entre les éléments
+  align-items: center; // Alignement des éléments au centre verticalement
+  margin: 5%; // Marges autour du header
 
   @media screen and (min-width: $breakpoint-desktop) {
-    margin: 40px 100px 49px 100px;
+    margin: 40px 100px 49px 100px; // Ajustement des marges pour les écrans plus grands
   }
 
   &__fig {
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 9rem;
+    display: flex; // Utilisation de flexbox pour aligner l'image
+    align-items: flex-start; // Alignement de l'image en haut
+    margin: 0; // Suppression des marges
+    width: 9rem; // Largeur de l'élément figure
 
     @media screen and (min-width: $breakpoint-desktop) {
-      width: 13.2rem;
+      width: 13.2rem; // Ajustement de la largeur pour les écrans plus grands
     }
 
     img {
-      width: 100%;
+      width: 100%; // L'image prend toute la largeur de son conteneur
     }
   }
 }

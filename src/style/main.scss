@@ -1,10 +1,13 @@
 /** @format */
 
-@import './Utils/variables';
-@import './Utils/mixins';
+// Importation des variables et mixins
+@import 'Params/variables';
+@import 'Params/mixins';
 
-@import './Base/base';
+// Importation des styles globaux
+@import 'Global/global';
 
+// Importation des styles des composants
 @import '../components/Banner/Banner';
 @import '../components/Cards/Card';
 @import '../components/Carrousel/Carrousel';

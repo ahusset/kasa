@@ -1,61 +1,61 @@
 /** @format */
 
 .host-comp {
-  @include flex-end;
-  width: 100%;
+  @include flex-end; // Utilisation d'un mixin pour aligner les éléments à la fin
+  width: 100%; // Largeur complète
 }
 
 .hostPicture {
-  display: flex;
-  margin-left: 10px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #c4c4c4;
+  display: flex; // Utilisation de flexbox
+  margin-left: 10px; // Marge à gauche
+  width: 32px; // Largeur de l'image
+  height: 32px; // Hauteur de l'image
+  border-radius: 50%; // Bordure arrondie
+  background: #c4c4c4; // Couleur de fond
 
   @media screen and (min-width: $breakpoint-desktop) {
-    width: 64px;
-    height: 64px;
+    width: 64px; // Largeur de l'image pour les écrans plus grands
+    height: 64px; // Hauteur de l'image pour les écrans plus grands
   }
 
   & img {
-    @include WH-full;
-    border-radius: 50%;
-    object-fit: cover;
+    @include WH-full; // Utilisation d'un mixin pour largeur et hauteur complètes
+    border-radius: 50%; // Bordure arrondie
+    object-fit: cover; // Ajustement de l'image pour couvrir le conteneur
   }
 }
 
 .host-name {
-  @include flex-end;
-  width: 63px;
-  height: 66px;
-  text-align: right;
-  @include font(12px, 500);
+  @include flex-end; // Utilisation d'un mixin pour aligner les éléments à la fin
+  width: 63px; // Largeur du conteneur de texte
+  height: 66px; // Hauteur du conteneur de texte
+  text-align: right; // Alignement du texte à droite
+  @include font(12px, 500); // Utilisation d'un mixin pour définir la police
 
   @media screen and (min-width: $breakpoint-desktop) {
-    @include font(18px, 500);
+    @include font(18px, 500); // Ajustement de la police pour les écrans plus grands
   }
 }
 
 .rate-host-container {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  display: flex; // Utilisation de flexbox
+  flex-direction: row-reverse; // Direction de la flexbox inversée
+  justify-content: space-between; // Espacement entre les éléments
 
   @media screen and (min-width: $breakpoint-desktop) {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; // Direction de la flexbox en colonne pour les écrans plus grands
+    justify-content: center; // Alignement des éléments au centre
   }
 }
 
 .hostInfo-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
+  display: flex; // Utilisation de flexbox
+  flex-direction: column; // Direction de la flexbox en colonne
+  width: 100%; // Largeur complète
+  justify-content: space-between; // Espacement entre les éléments
 
   @media screen and (min-width: $breakpoint-desktop) {
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: row; // Direction de la flexbox en ligne pour les écrans plus grands
+    align-items: flex-end; // Alignement des éléments à la fin pour les écrans plus grands
   }
 }

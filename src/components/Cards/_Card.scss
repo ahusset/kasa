@@ -7,7 +7,7 @@
   min-height: 350px;
   @include small-radius;
   min-width: 335px;
-  transition: transform 1s;
+  transition: transform 0.3s ease-in-out; // Transition pour l'effet de zoom
 
   @media screen and (min-width: $breakpoint-desktop) {
     width: 340px;
@@ -15,7 +15,7 @@
 
     &:hover,
     &:focus {
-      @include boxShadow;
+      transform: scale(1.05); // Effet de zoom au survol
     }
   }
 

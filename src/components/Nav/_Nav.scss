@@ -1,28 +1,28 @@
 /** @format */
 
 .nav-header {
-  @include flex-end;
-  text-transform: uppercase;
+  @include flex-end; // Utilisation d'un mixin pour aligner les éléments à la fin
+  text-transform: uppercase; // Transformation du texte en majuscules
 
   @media screen and (min-width: $breakpoint-desktop) {
-    text-transform: none;
+    text-transform: none; // Annuler la transformation du texte pour les écrans plus grands
   }
 
   &_link-home,
   &_link-about {
-    @include font-right(12px);
-    color: $primary-color;
-    text-decoration: none;
-    padding-left: 0.8rem;
+    @include font-right(12px); // Utilisation d'un mixin pour définir la police
+    color: $text-nav-principal-color; // Couleur du texte
+    text-decoration: none; // Supprimer la décoration du texte
+    padding-left: 0.8rem; // Padding à gauche
 
     @media screen and (min-width: $breakpoint-desktop) {
-      @include font-right(24px);
-      padding-left: 3.5rem;
+      @include font-right(24px); // Ajustement de la police pour les écrans plus grands
+      padding-left: 3.5rem; // Padding à gauche pour les écrans plus grands
     }
 
     &:hover,
     &:focus {
-      text-decoration-line: underline;
+      text-decoration-line: underline; // Souligner le texte au survol et au focus
     }
   }
 }

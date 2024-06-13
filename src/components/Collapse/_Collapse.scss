@@ -48,6 +48,7 @@
 
       @media screen and (min-width: $breakpoint-desktop) {
         @include font(24px, 400);
+        color: $text-nav-principal-color; // S'assurer que le texte est en noir sur fond blanc
       }
     }
   }

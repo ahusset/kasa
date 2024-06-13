@@ -1,29 +1,29 @@
 /** @format */
 
 .rate-comp {
-  display: flex;
-  justify-content: space-between;
-  width: 98px;
-  height: 18px;
-  margin-top: 24px;
+  display: flex; // Utilisation de flexbox pour aligner les étoiles en ligne
+  justify-content: space-between; // Espacement entre les étoiles
+  width: 98px; // Largeur totale du composant
+  height: 18px; // Hauteur totale du composant
+  margin-top: 24px; // Marge en haut
 
   @media screen and (min-width: $breakpoint-desktop) {
-    width: 196px;
-    height: 36px;
+    width: 196px; // Largeur pour les écrans plus grands
+    height: 36px; // Hauteur pour les écrans plus grands
   }
 }
 
 .rate-container {
-  display: flex;
-  align-items: flex-start;
+  display: flex; // Utilisation de flexbox pour aligner les éléments en ligne
+  align-items: flex-start; // Alignement des éléments en haut
 }
 
 .star {
-  width: 15px;
-  height: 15px;
+  width: 15px; // Largeur de chaque étoile
+  height: 15px; // Hauteur de chaque étoile
 
   @media screen and (min-width: $breakpoint-desktop) {
-    width: 30px;
-    height: 30px;
+    width: 30px; // Largeur pour les écrans plus grands
+    height: 30px; // Hauteur pour les écrans plus grands
   }
 }

@@ -42,7 +42,7 @@
 .errorLinkHome {
   @extend %flex-error; // Étendre les styles de %flex-error
   text-decoration: none; // Supprimer la décoration du texte
-  color: $primary-color; // Couleur du texte
+  color: #000000; // Couleur du texte
   @include font(14px, 500); // Utiliser un mixin pour définir la police
   margin-top: 9rem; // Marge en haut
 
